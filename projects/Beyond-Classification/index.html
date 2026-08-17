@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
         content="Beyond Classification: Structured Supervision Aligns Visual Evidence with Medical Semantics. BMVC 2026.">
   <meta name="keywords" content="BMVC, Vision Transformer, Medical Imaging, Structured Supervision, Spatial Collapse, Image-Text Alignment">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Beyond Classification: Structured Supervision Aligns Visual Evidence with Medical Semantics</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,700|Noto+Sans:400,500,600,700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
+  <script defer src="./static/js/bulma-carousel.min.js"></script>
+  <script defer src="./static/js/bulma-slider.min.js"></script>
+  <script defer src="./static/js/index.js"></script>
   <script>
     MathJax = {
       tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] },
@@ -35,348 +35,282 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://acenbai.github.io/HexiangBai.github.io/">
-        <span class="icon"><i class="fas fa-home"></i></span>
-      </a>
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+
+  <!-- ==================== Hero ==================== -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+
+            <h1 class="title is-1 publication-title">
+              Beyond Classification: Structured Supervision Aligns Visual Evidence with Medical Semantics
+            </h1>
+
+            <!-- TODO: fill real affiliations / homepage links -->
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><a href="https://acenbai.github.io/HexiangBai.github.io/" target="_blank">Hexiang Bai</a><sup>1</sup>,</span>
+              <span class="author-block"><a href="#">Hanyang Xu</a><sup>1</sup>,</span>
+              <span class="author-block"><a href="#">Xiaoxue Li</a><sup>1</sup>,</span>
+              <span class="author-block"><a href="#">Xiaoliang Wu</a><sup>2</sup>,</span>
+              <br>
+              <span class="author-block"><a href="#">Shangde Gao</a><sup>1</sup>,</span>
+              <span class="author-block"><a href="#">Hongxia Xu</a><sup>1</sup>,</span>
+              <span class="author-block"><a href="#">Ke Liu</a><sup>1,2</sup></span>
+            </div>
+
+            <div class="publication-authors affiliations">
+              <span class="author-block">
+                <sup>1</sup>Zhejiang University &nbsp;&middot;&nbsp;
+                <sup>2</sup>Institution Two
+              </span>
+            </div>
+
+            <div class="is-size-6 publication-authors" style="margin-top: 0.5rem;">
+              <span class="publication-venue">BMVC 2026</span>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="column has-text-centered" style="margin-top: 0.5rem;">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="./static/pdf/paper.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark" title="Coming soon">
+                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark" title="Coming soon">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</nav>
+  </section>
 
+  <!-- ==================== Highlights ==================== -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="highlights-grid">
+        <div class="highlight-card">
+          <div class="highlight-icon icon-graph">
+            <i class="fas fa-project-diagram"></i>
+          </div>
+          <h4>Graph Self-Supervision</h4>
+          <p>Topological priors over patches / regions regularize the global embedding space.</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-icon icon-seg">
+            <i class="fas fa-vector-square"></i>
+          </div>
+          <h4>Segmentation Co-Pretraining</h4>
+          <p>Dense pixel-level constraints anchor features to lesion boundaries and foreground.</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-icon icon-text">
+            <i class="fas fa-language"></i>
+          </div>
+          <h4>Image-Text Alignment</h4>
+          <p>Cross-modal grounding links visual patches with clinical language and diagnostic logic.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section class="hero">
-  <div class="hero-body">
+  <!-- ==================== Abstract ==================== -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Vision Transformers (ViTs) have shown immense potential in medical image analysis.
+              However, standard pre-training via global image classification suffers from
+              <i>spatial collapse</i>, where models rely heavily on background shortcuts rather than
+              localising critical foreground lesions.
+            </p>
+            <p>
+              To overcome this limitation and align visual evidence with precise medical semantics,
+              we systematically investigate alternative pre-training paradigms. Specifically, we
+              evaluate three independent forms of structured supervision: topological priors via
+              graph self-supervision, dense pixel-level constraints via segmentation, and
+              cross-modal semantic grounding via image-text pairs.
+            </p>
+            <p>
+              Our empirical analysis reveals that while all three forms of structured supervision
+              alleviate the global pooling bottleneck and steer visual attention towards foreground
+              regions, <strong>image-text alignment</strong> achieves the strongest overall performance.
+              When fine-tuned for downstream clinical classification, these models achieve superior
+              accuracy and yield highly interpretable attention maps focused on true pathological features.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== Pipeline ==================== -->
+  <section class="section hero is-light">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">
-            Beyond Classification: Structured Supervision Aligns Visual Evidence with Medical Semantics
-          </h1>
-
-          <!-- TODO: fill real affiliations / homepage links -->
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><a href="https://acenbai.github.io/HexiangBai.github.io/">Hexiang Bai</a><sup>1</sup>,</span>
-            <span class="author-block"><a href="#">Hanyang Xu</a><sup>1</sup>,</span>
-            <span class="author-block"><a href="#">Xiaoxue Li</a><sup>1</sup>,</span>
-            <span class="author-block"><a href="#">Xiaoliang Wu</a><sup>2</sup>,</span>
-            <span class="author-block"><a href="#">Shangde Gao</a><sup>1</sup>,</span>
-            <span class="author-block"><a href="#">Hongxia Xu</a><sup>1</sup>,</span>
-            <span class="author-block"><a href="#">Ke Liu</a><sup>1,2</sup></span>
-          </div>
-
-          <div class="is-size-6 publication-authors" style="color:#666; margin-top:0.35rem;">
-            <span class="author-block"><sup>1</sup>Zhejiang University,</span>
-            <span class="author-block"><sup>2</sup>Institution Two</span>
-          </div>
-
-          <div class="publication-venue">
-            <span class="venue">BMVC 2026</span>
-            <span class="badge">&nbsp;·&nbsp;Accepted</span>
-          </div>
-
-          <div class="publication-links" style="margin-top:1rem;">
-            <span class="link-block">
-              <a href="./static/pdf/paper.pdf" class="external-link button is-normal is-rounded is-dark">
-                <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                <span>Paper</span>
-              </a>
-            </span>
-            <span class="link-block">
-              <a href="#" class="external-link button is-normal is-rounded is-dark" title="Coming soon">
-                <span class="icon"><i class="ai ai-arxiv"></i></span>
-                <span>arXiv</span>
-              </a>
-            </span>
-            <span class="link-block">
-              <a href="#" class="external-link button is-normal is-rounded is-dark" title="Coming soon">
-                <span class="icon"><i class="fab fa-github"></i></span>
-                <span>Code</span>
-              </a>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <div class="figure figure-full">
-        <img src="./static/images/pipeline.png"
-             alt="Overview of three structured pre-training paradigms." />
-      </div>
-      <h2 class="subtitle has-text-centered teaser-caption">
-        Three structured pre-training paradigms beyond vanilla classification:
-        <b>graph self-supervision</b>, <b>segmentation co-pretraining</b>, and
-        <b>image-text alignment</b>.
-      </h2>
-    </div>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Vision Transformers (ViTs) have shown immense potential in medical image analysis.
-            However, standard pre-training via global image classification suffers from
-            <i>spatial collapse</i>, where models rely heavily on background shortcuts rather than
-            localising critical foreground lesions.
-          </p>
-          <p>
-            To overcome this limitation and align visual evidence with precise medical semantics,
-            we systematically investigate alternative pre-training paradigms. Specifically, we
-            evaluate three independent forms of structured supervision: topological priors via
-            graph self-supervision, dense pixel-level constraints via segmentation, and
-            cross-modal semantic grounding via image-text pairs.
-          </p>
-          <p>
-            Our empirical analysis reveals that while all three forms of structured supervision
-            alleviate the global pooling bottleneck and steer visual attention towards foreground
-            regions, image-text alignment achieves the strongest overall performance. By embedding
-            high-dimensional diagnostic logic, the cross-modal approach anchors attention on precise
-            visual evidence and enables more abstract clinical reasoning. When fine-tuned for
-            downstream clinical classification, these models achieve superior accuracy and yield
-            highly interpretable attention maps focused on true pathological features.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="columns is-centered section-block">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3 has-text-centered">Contributions</h2>
-        <div class="content has-text-justified">
-          <ul>
-            <li>
-              We identify and analyse <b>spatial collapse</b> in standard ViT classification
-              pre-training for medical imaging, showing that high accuracy can coexist with
-              poorly grounded lesion evidence.
-            </li>
-            <li>
-              We systematically evaluate three structured supervision paradigms
-              (graph, segmentation, and image-text) and show that all of them can steer
-              attention toward foreground lesions.
-            </li>
-            <li>
-              We find that <b>image-text cross-modal pre-training</b> is the most effective overall,
-              yielding stronger feature representations, higher accuracy, and more interpretable
-              visual evidence in downstream clinical classification.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <div class="section-block">
-      <h2 class="title is-3 has-text-centered">Spatial Collapse in Medical ViTs</h2>
-      <div class="columns is-centered">
-        <div class="column is-four-fifths">
-          <div class="content has-text-justified">
-            <p>
-              Driven by a global class-token objective, ViTs can learn shortcut associations with
-              background textures, scanner artifacts, or anatomical context, instead of localising
-              diagnostic lesions. We call this failure mode <b>spatial collapse</b>: the class token
-              remains predictive, but its discriminative patch evidence is weakly aligned with
-              lesion regions.
-            </p>
-            <p>
-              Across BUSI, HAM10000, and SIIM-ACR Pneumothorax, a standard ViT-B/16 reaches competitive
-              accuracy (avg.&nbsp;ACC&nbsp;0.836) but much weaker evidence localization
-              (avg.&nbsp;PIB&nbsp;0.168) than a convolutional reference (avg.&nbsp;PIB&nbsp;0.685).
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="figure figure-wide">
-        <img src="./static/images/vit_res_heatmap.png"
-             alt="Qualitative comparison of ViT and ResNet evidence localization." />
-        <p class="figure-caption">
-          Qualitative comparison of ViT and ResNet-50 evidence localization.
-          From left to right: original image, ground-truth lesion, patch-score heatmap, and top-scoring region.
-        </p>
-      </div>
-
-      <div class="figure figure-narrow">
-        <img src="./static/images/patch_score_distribution_BUSI_cvpr.png"
-             alt="Patch score distribution on BUSI." />
-        <p class="figure-caption">
-          Patch-score distribution used for evidence probing: discriminative evidence of vanilla
-          ViTs often drifts away from lesion regions.
-        </p>
-      </div>
-
-      <div class="table-wrap">
-        <table class="table is-striped is-fullwidth is-size-6">
-          <thead>
-            <tr>
-              <th>Dataset</th>
-              <th>ViT ACC</th>
-              <th>ViT PIB</th>
-              <th>ResNet ACC</th>
-              <th>ResNet PIB</th>
-              <th>ΔPIB</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>BUSI</td>
-              <td><b>0.888</b></td>
-              <td>0.071</td>
-              <td>0.862</td>
-              <td><b>0.690</b></td>
-              <td>+0.619</td>
-            </tr>
-            <tr>
-              <td>HAM10000</td>
-              <td>0.830</td>
-              <td>0.393</td>
-              <td><b>0.867</b></td>
-              <td><b>0.954</b></td>
-              <td>+0.561</td>
-            </tr>
-            <tr>
-              <td>SIIM-ACR</td>
-              <td>0.789</td>
-              <td>0.040</td>
-              <td><b>0.884</b></td>
-              <td><b>0.410</b></td>
-              <td>+0.370</td>
-            </tr>
-            <tr>
-              <td>Average</td>
-              <td>0.836</td>
-              <td>0.168</td>
-              <td>0.871</td>
-              <td>0.685</td>
-              <td>+0.517</td>
-            </tr>
-          </tbody>
-        </table>
-        <p class="table-caption">
-          High classification accuracy does not imply faithful lesion-level evidence alignment.
-        </p>
-      </div>
-    </div>
-
-
-    <div class="section-block">
-      <h2 class="title is-3 has-text-centered">Datasets</h2>
-      <div class="columns is-centered">
-        <div class="column is-four-fifths">
-          <div class="content has-text-justified">
-            <p>
-              We evaluate on three 2D medical classification datasets with foreground annotations,
-              spanning ultrasound, dermoscopy, and chest X-ray. Image-level labels are used for
-              classification; lesion masks are used only for evidence-localization analysis
-              (unless explicitly used in segmentation co-pretraining).
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="table-wrap">
-        <table class="table is-striped is-fullwidth is-size-6">
-          <thead>
-            <tr>
-              <th>Dataset</th>
-              <th>Modality</th>
-              <th>Task</th>
-              <th># Images</th>
-              <th># Classes</th>
-              <th>Mask</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>BUSI</td>
-              <td>Ultrasound</td>
-              <td>Breast lesion cls.</td>
-              <td>780</td>
-              <td>3</td>
-              <td>Lesion</td>
-            </tr>
-            <tr>
-              <td>HAM10000</td>
-              <td>Dermoscopy</td>
-              <td>Skin lesion cls.</td>
-              <td>10,015</td>
-              <td>7</td>
-              <td>Lesion</td>
-            </tr>
-            <tr>
-              <td>SIIM-ACR</td>
-              <td>X-ray</td>
-              <td>Pneumothorax cls.</td>
-              <td>12,047</td>
-              <td>2</td>
-              <td>Pneumothorax</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-
-    <div class="section-block">
-      <h2 class="title is-3 has-text-centered">Structured Supervision Paradigms</h2>
-      <div class="columns is-centered">
-        <div class="column is-four-fifths">
-          <div class="content has-text-justified">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Structured Supervision Paradigms</h2>
+          <div class="content has-text-justified" style="margin-bottom: 1.25rem;">
             <p>
               We compare three independent forms of structured supervision that introduce spatial
-              or semantic constraints beyond standard classification:
+              or semantic constraints beyond standard classification. All three alleviate spatial
+              collapse to some extent, but reshape patch-to-global aggregation differently.
             </p>
-            <ul>
-              <li>
-                <b>Graph self-supervision</b> (LVM-Med): topological priors by modeling relations among patches / regions.
-              </li>
-              <li>
-                <b>Segmentation co-pretraining</b>: dense pixel-level constraints that encourage lesion-boundary awareness.
-              </li>
-              <li>
-                <b>Image-text alignment</b> (BiomedCLIP): cross-modal grounding that links visual patches with clinical language.
-              </li>
-            </ul>
-            <p>
-              All three can alleviate spatial collapse to some extent, but they reshape
-              patch-to-global aggregation in different ways. Empirically, image-text alignment
-              provides the strongest overall grounding, while dense segmentation is particularly
-              useful for small and spatially unstable lesions.
-            </p>
+          </div>
+          <div class="figure-card">
+            <img src="./static/images/pipeline.png"
+                 alt="Overview of three structured pre-training paradigms."
+                 loading="lazy">
+            <div class="figure-caption">
+              Three structured pre-training paradigms beyond vanilla classification:
+              <b>graph self-supervision</b>, <b>segmentation co-pretraining</b>, and
+              <b>image-text alignment</b>.
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </section>
 
-
-    <div class="section-block">
-      <h2 class="title is-3 has-text-centered">Results</h2>
+  <!-- ==================== Spatial Collapse ==================== -->
+  <section class="section">
+    <div class="container is-max-desktop">
       <div class="columns is-centered">
-        <div class="column is-four-fifths">
-          <div class="content has-text-justified">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Spatial Collapse in Medical ViTs</h2>
+          <div class="columns is-vcentered">
+            <div class="column is-half">
+              <div class="content has-text-justified">
+                <p>
+                  Driven by a global class-token objective, ViTs can learn shortcut associations with
+                  background textures, scanner artifacts, or anatomical context, instead of localising
+                  diagnostic lesions. We call this failure mode <b>spatial collapse</b>: the class token
+                  remains predictive, but its discriminative patch evidence is weakly aligned with
+                  lesion regions.
+                </p>
+                <p>
+                  Across BUSI, HAM10000, and SIIM-ACR Pneumothorax, a standard ViT-B/16 reaches
+                  competitive accuracy (avg.&nbsp;ACC&nbsp;0.836) but much weaker evidence localization
+                  (avg.&nbsp;PIB&nbsp;0.168) than a convolutional reference (avg.&nbsp;PIB&nbsp;0.685).
+                </p>
+              </div>
+            </div>
+            <div class="column is-half">
+              <div class="figure-card">
+                <img src="./static/images/vit_res_heatmap.png"
+                     alt="Qualitative comparison of ViT and ResNet evidence localization."
+                     loading="lazy">
+                <div class="figure-caption">
+                  ViT vs ResNet-50 evidence localization. From left to right: original image,
+                  ground-truth lesion, patch-score heatmap, and top-scoring region.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="columns" style="margin-top: 1.25rem;">
+            <div class="column">
+              <div class="figure-card">
+                <img src="./static/images/patch_score_distribution_BUSI_cvpr.png"
+                     alt="Patch score distribution on BUSI."
+                     loading="lazy">
+                <div class="figure-caption">
+                  Patch-score distribution used for evidence probing: discriminative evidence of
+                  vanilla ViTs often drifts away from lesion regions.
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="table-wrap">
+                <table class="table is-striped is-fullwidth is-size-7">
+                  <thead>
+                    <tr>
+                      <th>Dataset</th>
+                      <th>ViT ACC</th>
+                      <th>ViT PIB</th>
+                      <th>ResNet ACC</th>
+                      <th>ResNet PIB</th>
+                      <th>ΔPIB</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>BUSI</td>
+                      <td><b>0.888</b></td>
+                      <td>0.071</td>
+                      <td>0.862</td>
+                      <td><b>0.690</b></td>
+                      <td>+0.619</td>
+                    </tr>
+                    <tr>
+                      <td>HAM10000</td>
+                      <td>0.830</td>
+                      <td>0.393</td>
+                      <td><b>0.867</b></td>
+                      <td><b>0.954</b></td>
+                      <td>+0.561</td>
+                    </tr>
+                    <tr>
+                      <td>SIIM-ACR</td>
+                      <td>0.789</td>
+                      <td>0.040</td>
+                      <td><b>0.884</b></td>
+                      <td><b>0.410</b></td>
+                      <td>+0.370</td>
+                    </tr>
+                    <tr>
+                      <td>Average</td>
+                      <td>0.836</td>
+                      <td>0.168</td>
+                      <td>0.871</td>
+                      <td>0.685</td>
+                      <td>+0.517</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="table-caption">
+                High accuracy does not imply faithful lesion-level evidence alignment.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== Results ==================== -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Results</h2>
+          <div class="content has-text-justified" style="margin-bottom: 1.25rem;">
             <p>
               Among the evaluated paradigms, <b>image-text alignment</b> provides the strongest overall
               evidence grounding: BiomedCLIP fine-tuning raises average PIB from
@@ -384,74 +318,77 @@
               helpful when lesions are small and spatially unstable (e.g., pneumothorax).
             </p>
           </div>
+
+          <div class="table-wrap" style="margin-bottom: 1.75rem;">
+            <table class="table is-striped is-fullwidth is-size-7">
+              <thead>
+                <tr>
+                  <th>Model</th>
+                  <th>Method</th>
+                  <th>BUSI ACC / PIB</th>
+                  <th>HAM10000 ACC / PIB</th>
+                  <th>Pneumothorax ACC / PIB</th>
+                  <th>Avg. PIB</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ViT-B/16</td>
+                  <td>Standard</td>
+                  <td>0.888 / 0.071</td>
+                  <td>0.830 / 0.393</td>
+                  <td>0.847 / 0.040</td>
+                  <td>0.168</td>
+                </tr>
+                <tr>
+                  <td>BiomedCLIP</td>
+                  <td>Fine-tuning</td>
+                  <td>0.888 / <b>0.385</b></td>
+                  <td>0.843 / <b>0.768</b></td>
+                  <td>0.829 / 0.076</td>
+                  <td><b>0.410</b></td>
+                </tr>
+                <tr>
+                  <td>LVM-Med</td>
+                  <td>Fine-tuning</td>
+                  <td>0.715 / 0.114</td>
+                  <td>0.836 / 0.248</td>
+                  <td><b>0.864</b> / 0.051</td>
+                  <td>0.138</td>
+                </tr>
+                <tr>
+                  <td>ViT-B/16</td>
+                  <td>Co-training</td>
+                  <td><b>0.897</b> / 0.128</td>
+                  <td><b>0.862</b> / 0.268</td>
+                  <td>0.856 / <b>0.121</b></td>
+                  <td>0.172</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="figure-card">
+            <img src="./static/images/isic_four_methods_no_title_restyled.png"
+                 alt="Patch-score heatmaps across evaluated methods on ISIC/HAM10000."
+                 loading="lazy">
+            <div class="figure-caption">
+              Patch-score heatmaps across methods. Image-text fine-tuning yields the most
+              lesion-covering evidence maps on dermoscopic images.
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="table-wrap">
-        <table class="table is-striped is-fullwidth is-size-7">
-          <thead>
-            <tr>
-              <th>Model</th>
-              <th>Method</th>
-              <th>BUSI ACC / PIB</th>
-              <th>HAM10000 ACC / PIB</th>
-              <th>Pneumothorax ACC / PIB</th>
-              <th>Avg. PIB</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>ViT-B/16</td>
-              <td>Standard</td>
-              <td>0.888 / 0.071</td>
-              <td>0.830 / 0.393</td>
-              <td>0.847 / 0.040</td>
-              <td>0.168</td>
-            </tr>
-            <tr>
-              <td>BiomedCLIP</td>
-              <td>Fine-tuning</td>
-              <td>0.888 / <b>0.385</b></td>
-              <td>0.843 / <b>0.768</b></td>
-              <td>0.829 / 0.076</td>
-              <td><b>0.410</b></td>
-            </tr>
-            <tr>
-              <td>LVM-Med</td>
-              <td>Fine-tuning</td>
-              <td>0.715 / 0.114</td>
-              <td>0.836 / 0.248</td>
-              <td><b>0.864</b> / 0.051</td>
-              <td>0.138</td>
-            </tr>
-            <tr>
-              <td>ViT-B/16</td>
-              <td>Co-training</td>
-              <td><b>0.897</b> / 0.128</td>
-              <td><b>0.862</b> / 0.268</td>
-              <td>0.856 / <b>0.121</b></td>
-              <td>0.172</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="figure figure-full isic-fig">
-        <img src="./static/images/isic_four_methods_no_title_restyled.png"
-             alt="Patch-score heatmaps across evaluated methods on ISIC/HAM10000." />
-        <p class="figure-caption">
-          Patch-score heatmaps across methods. Image-text fine-tuning yields the most
-          lesion-covering evidence maps on dermoscopic images.
-        </p>
-      </div>
     </div>
+  </section>
 
-
-    <div class="section-block">
-      <h2 class="title is-3 has-text-centered">Why Does Vanilla Classification Fail?</h2>
+  <!-- ==================== Why Vanilla Fails ==================== -->
+  <section class="section">
+    <div class="container is-max-desktop">
       <div class="columns is-centered">
-        <div class="column is-four-fifths">
-          <div class="content has-text-justified">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Why Does Vanilla Classification Fail?</h2>
+          <div class="content has-text-justified" style="margin-bottom: 1.25rem;">
             <p>
               Image-level classification supervises only the final prediction from the global
               representation, without constraining which patches are aggregated into the class token.
@@ -461,31 +398,39 @@
               faithful lesion grounding.
             </p>
           </div>
-        </div>
-      </div>
 
-      <div class="columns is-centered is-mobile is-variable is-2 pca-grid" style="margin-top:0.5rem;">
-        <div class="column has-text-centered">
-          <img src="./static/images/original_cls_pca.png" alt="PCA of original class tokens." />
-          <p class="figure-caption">(a) Original</p>
-        </div>
-        <div class="column has-text-centered">
-          <img src="./static/images/background_cls_pca.png" alt="PCA of background-only class tokens." />
-          <p class="figure-caption">(b) Background-only</p>
-        </div>
-        <div class="column has-text-centered">
-          <img src="./static/images/foreground_cls_pca.png" alt="PCA of foreground-only class tokens." />
-          <p class="figure-caption">(c) Foreground-only</p>
+          <div class="columns">
+            <div class="column">
+              <div class="figure-card">
+                <img src="./static/images/original_cls_pca.png" alt="PCA of original class tokens." loading="lazy">
+                <div class="figure-caption">(a) Original</div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="figure-card">
+                <img src="./static/images/background_cls_pca.png" alt="PCA of background-only class tokens." loading="lazy">
+                <div class="figure-caption">(b) Background-only</div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="figure-card">
+                <img src="./static/images/foreground_cls_pca.png" alt="PCA of foreground-only class tokens." loading="lazy">
+                <div class="figure-caption">(c) Foreground-only</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-
-    <div class="section-block">
-      <h2 class="title is-3 has-text-centered">Why Does Structured Supervision Help?</h2>
+  <!-- ==================== Why Structured Helps ==================== -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
       <div class="columns is-centered">
-        <div class="column is-four-fifths">
-          <div class="content has-text-justified">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Why Does Structured Supervision Help?</h2>
+          <div class="content has-text-justified" style="margin-bottom: 1.25rem;">
             <p>
               Structured pre-training strengthens coupling between local patch representations and
               the global diagnostic representation. On pneumothorax-positive samples, vanilla ViT
@@ -494,28 +439,34 @@
               (segmentation co-training reaches mean AUC 0.697).
             </p>
           </div>
-        </div>
-      </div>
 
-      <div class="columns is-centered is-vcentered fig-row" style="margin-top:0.6rem;">
-        <div class="column has-text-centered">
-          <img src="./static/images/pneumothorax_raw_patch_score_distribution_four_models_no_title.png"
-               alt="Patch score distributions under different methods." />
-          <p class="figure-caption">Patch evidence score distributions across methods.</p>
-        </div>
-        <div class="column has-text-centered">
-          <img src="./static/images/pneumothorax_fg_bg_auc_boxplot_cvpr_exactold.png"
-               alt="Foreground-background AUC boxplot." />
-          <p class="figure-caption">Foreground–background AUC of patch evidence on pneumothorax.</p>
+          <div class="columns">
+            <div class="column">
+              <div class="figure-card">
+                <img src="./static/images/pneumothorax_raw_patch_score_distribution_four_models_no_title.png"
+                     alt="Patch score distributions under different methods." loading="lazy">
+                <div class="figure-caption">Patch evidence score distributions across methods.</div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="figure-card">
+                <img src="./static/images/pneumothorax_fg_bg_auc_boxplot_cvpr_exactold.png"
+                     alt="Foreground-background AUC boxplot." loading="lazy">
+                <div class="figure-caption">Foreground–background AUC of patch evidence on pneumothorax.</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-
-    <div class="section-block">
-      <h2 class="title is-3 has-text-centered">Theoretical Analysis</h2>
+  <!-- ==================== Theoretical Analysis ==================== -->
+  <section class="section">
+    <div class="container is-max-desktop">
       <div class="columns is-centered">
-        <div class="column is-four-fifths">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Theoretical Analysis</h2>
           <div class="content has-text-justified">
             <p>
               Why do globally supervised ViTs prefer background shortcuts?
@@ -524,15 +475,14 @@
               <b>high-SNR, easily accessible local minimum</b> under SGD.
             </p>
 
-            <h3 class="title is-5">Linear attention + global pooling</h3>
+            <h3 class="title is-5" style="margin-top:1.4rem;">Linear attention + global pooling</h3>
             <p>
               With patches \(X=[x_1,\ldots,x_N]^\top\) and attention weights
               \(W=W_QW_K^\top\), a Softmax-free attention layer yields
             </p>
             \[
               Z = X + XWX^\top X,
-            \]
-            \[
+              \qquad
               \bar{z}
               =
               \bar{x}
@@ -554,7 +504,7 @@
               \Bigg).
             \]
 
-            <h3 class="title is-5">SNR of the two paths</h3>
+            <h3 class="title is-5" style="margin-top:1.4rem;">SNR of the two paths</h3>
             <p>
               Treat foreground patches as high-variance semantic features
               \(x_f\sim\mathcal{N}(\mu_y,\Sigma_{fg})\) and background patches as nearly constant
@@ -564,157 +514,130 @@
               \mathbb{E}[\Delta W_{bg}]\approx N_b(\theta^\top c)c^\top,
               \qquad
               \mathbb{V}[\Delta W_{bg}]\approx 0,
+              \qquad
+              \mathbb{V}[\Delta W_{fg}]\propto\mathrm{Tr}(\Sigma_{fg}^2).
             \]
-            <p>
-              while the foreground update has large covariance noise
-              \(\mathbb{V}[\Delta W_{fg}]\propto\mathrm{Tr}(\Sigma_{fg}^2)\). Defining
-            </p>
             \[
               \mathrm{SNR}
               =
-              \frac{\|\mathbb{E}[\Delta W]\|}{\sqrt{\mathbb{V}[\Delta W]}},
+              \frac{\|\mathbb{E}[\Delta W]\|}{\sqrt{\mathbb{V}[\Delta W]}}
+              \;\Rightarrow\;
+              \mathrm{SNR}_{bg}\to\infty \;\gg\; \mathrm{SNR}_{fg}.
             \]
             <p>
-              we obtain \(\mathrm{SNR}_{bg}\to\infty\) versus a very low \(\mathrm{SNR}_{fg}\).
               Under SGD, background weights therefore grow like \(\mathcal{O}(t)\), whereas
               foreground weights behave like a noisy random walk \(\mathcal{O}(\sqrt{t})\).
             </p>
           </div>
-        </div>
-      </div>
 
-      <div class="theory-note">
-        <p style="margin-bottom:0.5rem;">
-          <b>Implication.</b>
-          Early training preferentially routes global information into homogeneous
-          “register-like” background patches—the same mechanism behind
-          <i>spatial collapse</i>. Structured supervision (graph / segmentation / image–text)
-          raises the cost of this shortcut by forcing patch–global coupling to respect
-          lesion evidence or clinical semantics.
-        </p>
-        <p class="is-size-7" style="margin-bottom:0; color:#666;">
-          Full derivations are in Appendix&nbsp;A of the paper.
-        </p>
-      </div>
+          <div class="theory-note">
+            <p style="margin-bottom:0.5rem;">
+              <b>Implication.</b>
+              Early training preferentially routes global information into homogeneous
+              “register-like” background patches—the same mechanism behind
+              <i>spatial collapse</i>. Structured supervision (graph / segmentation / image–text)
+              raises the cost of this shortcut by forcing patch–global coupling to respect
+              lesion evidence or clinical semantics.
+            </p>
+            <p class="is-size-7" style="margin-bottom:0; color:#94a3b8;">
+              Full derivations are in Appendix&nbsp;A of the paper.
+            </p>
+          </div>
 
-      <div class="table-wrap">
-        <p class="table-caption" style="margin-bottom:0.55rem;">
-          Empirically, structured methods also improve foreground–background ranking of patch evidence
-          (pneumothorax FG/BG AUC):
-        </p>
-        <table class="table is-striped is-fullwidth is-size-6">
-          <thead>
-            <tr>
-              <th>Method</th>
-              <th>Mean AUC</th>
-              <th>Median AUC</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>ViT-B/16</td>
-              <td>0.287</td>
-              <td>0.249</td>
-            </tr>
-            <tr>
-              <td>ResNet50-L4</td>
-              <td>0.669</td>
-              <td>0.718</td>
-            </tr>
-            <tr>
-              <td>ViT Co-train</td>
-              <td><b>0.697</b></td>
-              <td><b>0.722</b></td>
-            </tr>
-            <tr>
-              <td>BiomedCLIP FT</td>
-              <td>0.431</td>
-              <td>0.420</td>
-            </tr>
-            <tr>
-              <td>LVM-Med FT</td>
-              <td>0.408</td>
-              <td>0.401</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-
-    <div class="section-block">
-      <h2 class="title is-3 has-text-centered">Takeaways</h2>
-      <div class="columns is-centered">
-        <div class="column is-four-fifths">
-          <div class="content has-text-justified">
-            <ul>
-              <li>
-                Standard ViT classification can suffer from <b>spatial collapse</b>: accurate labels
-                with poorly grounded lesion evidence.
-              </li>
-              <li>
-                Graph, segmentation, and image-text supervision all help, but reshape aggregation differently.
-              </li>
-              <li>
-                <b>Image-text alignment</b> gives the strongest overall grounding; dense segmentation
-                is especially useful for small / unstable lesions.
-              </li>
-              <li>
-                Medical classifiers should be evaluated not only by accuracy, but also by whether
-                visual evidence aligns with lesion-level medical semantics.
-              </li>
-            </ul>
+          <div class="table-wrap" style="margin-top:1.5rem;">
+            <p class="table-caption" style="margin-bottom:0.55rem; padding-top:0.75rem;">
+              Structured methods also improve foreground–background ranking of patch evidence
+              (pneumothorax FG/BG AUC):
+            </p>
+            <table class="table is-striped is-fullwidth is-size-6">
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th>Mean AUC</th>
+                  <th>Median AUC</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ViT-B/16</td>
+                  <td>0.287</td>
+                  <td>0.249</td>
+                </tr>
+                <tr>
+                  <td>ResNet50-L4</td>
+                  <td>0.669</td>
+                  <td>0.718</td>
+                </tr>
+                <tr>
+                  <td>ViT Co-train</td>
+                  <td><b>0.697</b></td>
+                  <td><b>0.722</b></td>
+                </tr>
+                <tr>
+                  <td>BiomedCLIP FT</td>
+                  <td>0.431</td>
+                  <td>0.420</td>
+                </tr>
+                <tr>
+                  <td>LVM-Med FT</td>
+                  <td>0.408</td>
+                  <td>0.401</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
     </div>
+  </section>
 
-  </div>
-</section>
-
-
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title is-3 has-text-centered">BibTeX</h2>
-    <pre><code>@inproceedings{bai2026beyond,
+  <!-- ==================== BibTeX ==================== -->
+  <section class="section hero is-light" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title is-3" style="margin-bottom:0;">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@inproceedings{bai2026beyond,
   title     = {Beyond Classification: Structured Supervision Aligns Visual Evidence with Medical Semantics},
   author    = {Bai, Hexiang and Xu, Hanyang and Li, Xiaoxue and Wu, Xiaoliang and Gao, Shangde and Xu, Hongxia and Liu, Ke},
   booktitle = {British Machine Vision Conference (BMVC)},
   year      = {2026}
 }</code></pre>
-  </div>
-</section>
-
-
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link" href="./static/pdf/paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/AcenBai" class="external-link">
-        <i class="fab fa-github"></i>
-      </a>
     </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content has-text-centered">
-          <p>
-            This website is licensed under a
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
-              Creative Commons Attribution-ShareAlike 4.0 International License
-            </a>.
-          </p>
-          <p>
-            Website template adapted from
-            <a href="https://nerfies.github.io">Nerfies</a>
-            (<a href="https://github.com/nerfies/nerfies.github.io">source code</a>.
-          </p>
+  </section>
+
+  </main>
+
+  <!-- ==================== Footer ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="./static/pdf/paper.pdf">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="https://github.com/AcenBai" class="external-link">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content has-text-centered">
+            <p>
+              Website template adapted from
+              <a href="https://nerfies.github.io">Nerfies</a>
+              (<a href="https://github.com/nerfies/nerfies.github.io">source code</a>).
+              Licensed under
+              <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 </body>
 </html>
