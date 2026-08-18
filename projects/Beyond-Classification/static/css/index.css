@@ -64,7 +64,8 @@ section.hero.is-light {
 }
 
 .has-text-centered .title.is-3::after,
-.has-text-centered > .title.is-3::after {
+.has-text-centered > .title.is-3::after,
+.columns.has-text-centered .title.is-3::after {
   content: '';
   position: absolute;
   bottom: 0;
