@@ -202,7 +202,7 @@
       <div class="columns is-centered">
         <div class="column is-full-width">
           <h2 class="title is-3">Spatial Collapse in Medical ViTs</h2>
-          <div class="columns is-vcentered">
+          <div class="columns fig-pair">
             <div class="column is-half">
               <div class="content has-text-justified">
                 <p>
@@ -217,6 +217,19 @@
                   competitive accuracy (avg.&nbsp;ACC&nbsp;0.836) but much weaker evidence localization
                   (avg.&nbsp;PIB&nbsp;0.168) than a convolutional reference (avg.&nbsp;PIB&nbsp;0.685).
                 </p>
+                <p>
+                  The patch-score distribution below shows how discriminative evidence drifts away
+                  from lesion regions under a purely global objective.
+                </p>
+              </div>
+              <div class="figure-card" style="margin-top: 1rem;">
+                <img src="./static/images/patch_score_distribution_BUSI_cvpr.png"
+                     alt="Patch score distribution on BUSI."
+                     loading="lazy">
+                <div class="figure-caption">
+                  Patch-score distribution used for evidence probing: discriminative evidence of
+                  vanilla ViTs often drifts away from lesion regions.
+                </div>
               </div>
             </div>
             <div class="column is-half">
@@ -229,23 +242,7 @@
                   ground-truth lesion, patch-score heatmap, and top-scoring region.
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div class="columns" style="margin-top: 1.25rem;">
-            <div class="column">
-              <div class="figure-card">
-                <img src="./static/images/patch_score_distribution_BUSI_cvpr.png"
-                     alt="Patch score distribution on BUSI."
-                     loading="lazy">
-                <div class="figure-caption">
-                  Patch-score distribution used for evidence probing: discriminative evidence of
-                  vanilla ViTs often drifts away from lesion regions.
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="table-wrap">
+              <div class="table-wrap" style="margin-top: 1rem;">
                 <table class="table is-striped is-fullwidth is-size-7">
                   <thead>
                     <tr>
