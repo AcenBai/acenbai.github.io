@@ -315,11 +315,17 @@ section.hero.is-light {
   border-radius: var(--radius);
 }
 
-/* paired figures forced to identical display height, no crop (letterbox on light bg) */
+/* Paired figures: identical image box, captions aligned at the bottom.
+   The card must be the only child of its column, otherwise the 100% height
+   stretch overflows the row. */
+.fig-pair > .column {
+  display: flex;
+}
+
 .fig-pair .figure-card {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  width: 100%;
 }
 
 .fig-pair .figure-card img {
@@ -328,6 +334,10 @@ section.hero.is-light {
   object-fit: contain;
   background: #fbfdff;
   display: block;
+}
+
+.fig-pair .figure-caption {
+  flex: 1 1 auto;
 }
 
 .figure-caption {

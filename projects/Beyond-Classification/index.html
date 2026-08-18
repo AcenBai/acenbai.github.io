@@ -17,14 +17,14 @@
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css?v=20260819">
+  <link rel="stylesheet" href="./static/css/index.css?v=20260819b">
   <link rel="icon" href="./static/images/favicon.svg">
 
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script defer src="./static/js/bulma-carousel.min.js"></script>
   <script defer src="./static/js/bulma-slider.min.js"></script>
-  <script defer src="./static/js/index.js?v=20260819"></script>
+  <script defer src="./static/js/index.js?v=20260819b"></script>
   <script>
     MathJax = {
       tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] },
@@ -202,36 +202,23 @@
       <div class="columns is-centered">
         <div class="column is-full-width">
           <h2 class="title is-3">Spatial Collapse in Medical ViTs</h2>
+
+          <div class="content has-text-justified" style="margin-bottom: 1.25rem;">
+            <p>
+              Driven by a global class-token objective, ViTs can learn shortcut associations with
+              background textures, scanner artifacts, or anatomical context, instead of localising
+              diagnostic lesions. We call this failure mode <b>spatial collapse</b>: the class token
+              remains predictive, but its discriminative patch evidence is weakly aligned with
+              lesion regions.
+            </p>
+            <p>
+              Across BUSI, HAM10000, and SIIM-ACR Pneumothorax, a standard ViT-B/16 reaches
+              competitive accuracy (avg.&nbsp;ACC&nbsp;0.836) but much weaker evidence localization
+              (avg.&nbsp;PIB&nbsp;0.168) than a convolutional reference (avg.&nbsp;PIB&nbsp;0.685).
+            </p>
+          </div>
+
           <div class="columns fig-pair">
-            <div class="column is-half">
-              <div class="content has-text-justified">
-                <p>
-                  Driven by a global class-token objective, ViTs can learn shortcut associations with
-                  background textures, scanner artifacts, or anatomical context, instead of localising
-                  diagnostic lesions. We call this failure mode <b>spatial collapse</b>: the class token
-                  remains predictive, but its discriminative patch evidence is weakly aligned with
-                  lesion regions.
-                </p>
-                <p>
-                  Across BUSI, HAM10000, and SIIM-ACR Pneumothorax, a standard ViT-B/16 reaches
-                  competitive accuracy (avg.&nbsp;ACC&nbsp;0.836) but much weaker evidence localization
-                  (avg.&nbsp;PIB&nbsp;0.168) than a convolutional reference (avg.&nbsp;PIB&nbsp;0.685).
-                </p>
-                <p>
-                  The patch-score distribution below shows how discriminative evidence drifts away
-                  from lesion regions under a purely global objective.
-                </p>
-              </div>
-              <div class="figure-card" style="margin-top: 1rem;">
-                <img src="./static/images/patch_score_distribution_BUSI_cvpr.png"
-                     alt="Patch score distribution on BUSI."
-                     loading="lazy">
-                <div class="figure-caption">
-                  Patch-score distribution used for evidence probing: discriminative evidence of
-                  vanilla ViTs often drifts away from lesion regions.
-                </div>
-              </div>
-            </div>
             <div class="column is-half">
               <div class="figure-card">
                 <img src="./static/images/vit_res_heatmap.png"
@@ -242,59 +229,71 @@
                   ground-truth lesion, patch-score heatmap, and top-scoring region.
                 </div>
               </div>
-              <div class="table-wrap" style="margin-top: 1rem;">
-                <table class="table is-striped is-fullwidth is-size-7">
-                  <thead>
-                    <tr>
-                      <th>Dataset</th>
-                      <th>ViT ACC</th>
-                      <th>ViT PIB</th>
-                      <th>ResNet ACC</th>
-                      <th>ResNet PIB</th>
-                      <th>ΔPIB</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>BUSI</td>
-                      <td><b>0.888</b></td>
-                      <td>0.071</td>
-                      <td>0.862</td>
-                      <td><b>0.690</b></td>
-                      <td>+0.619</td>
-                    </tr>
-                    <tr>
-                      <td>HAM10000</td>
-                      <td>0.830</td>
-                      <td>0.393</td>
-                      <td><b>0.867</b></td>
-                      <td><b>0.954</b></td>
-                      <td>+0.561</td>
-                    </tr>
-                    <tr>
-                      <td>SIIM-ACR</td>
-                      <td>0.789</td>
-                      <td>0.040</td>
-                      <td><b>0.884</b></td>
-                      <td><b>0.410</b></td>
-                      <td>+0.370</td>
-                    </tr>
-                    <tr>
-                      <td>Average</td>
-                      <td>0.836</td>
-                      <td>0.168</td>
-                      <td>0.871</td>
-                      <td>0.685</td>
-                      <td>+0.517</td>
-                    </tr>
-                  </tbody>
-                </table>
+            </div>
+            <div class="column is-half">
+              <div class="figure-card">
+                <img src="./static/images/patch_score_distribution_BUSI_cvpr.png"
+                     alt="Patch score distribution on BUSI."
+                     loading="lazy">
+                <div class="figure-caption">
+                  Patch-score distribution used for evidence probing: discriminative evidence of
+                  vanilla ViTs often drifts away from lesion regions.
+                </div>
               </div>
-              <p class="table-caption">
-                High accuracy does not imply faithful lesion-level evidence alignment.
-              </p>
             </div>
           </div>
+
+          <div class="table-wrap" style="margin-top: 1.5rem;">
+            <table class="table is-striped is-fullwidth is-size-7">
+              <thead>
+                <tr>
+                  <th>Dataset</th>
+                  <th>ViT ACC</th>
+                  <th>ViT PIB</th>
+                  <th>ResNet ACC</th>
+                  <th>ResNet PIB</th>
+                  <th>ΔPIB</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>BUSI</td>
+                  <td><b>0.888</b></td>
+                  <td>0.071</td>
+                  <td>0.862</td>
+                  <td><b>0.690</b></td>
+                  <td>+0.619</td>
+                </tr>
+                <tr>
+                  <td>HAM10000</td>
+                  <td>0.830</td>
+                  <td>0.393</td>
+                  <td><b>0.867</b></td>
+                  <td><b>0.954</b></td>
+                  <td>+0.561</td>
+                </tr>
+                <tr>
+                  <td>SIIM-ACR</td>
+                  <td>0.789</td>
+                  <td>0.040</td>
+                  <td><b>0.884</b></td>
+                  <td><b>0.410</b></td>
+                  <td>+0.370</td>
+                </tr>
+                <tr>
+                  <td>Average</td>
+                  <td>0.836</td>
+                  <td>0.168</td>
+                  <td>0.871</td>
+                  <td>0.685</td>
+                  <td>+0.517</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-caption">
+            High accuracy does not imply faithful lesion-level evidence alignment.
+          </p>
 
         </div>
       </div>
@@ -451,49 +450,50 @@
                      alt="Foreground-background AUC boxplot." loading="lazy">
                 <div class="figure-caption">Foreground–background AUC of patch evidence on pneumothorax.</div>
               </div>
-              <div class="table-wrap" style="margin-top: 1rem;">
-                <table class="table is-striped is-fullwidth is-size-7">
-                  <thead>
-                    <tr>
-                      <th>Method</th>
-                      <th>Mean AUC</th>
-                      <th>Median AUC</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>ViT-B/16</td>
-                      <td>0.287</td>
-                      <td>0.249</td>
-                    </tr>
-                    <tr>
-                      <td>ResNet50-L4</td>
-                      <td>0.669</td>
-                      <td>0.718</td>
-                    </tr>
-                    <tr>
-                      <td>ViT Co-train</td>
-                      <td><b>0.697</b></td>
-                      <td><b>0.722</b></td>
-                    </tr>
-                    <tr>
-                      <td>BiomedCLIP FT</td>
-                      <td>0.431</td>
-                      <td>0.420</td>
-                    </tr>
-                    <tr>
-                      <td>LVM-Med FT</td>
-                      <td>0.408</td>
-                      <td>0.401</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <p class="table-caption">
-                Structured methods improve foreground–background ranking of patch evidence.
-              </p>
             </div>
           </div>
+
+          <div class="table-wrap" style="margin-top: 1.5rem;">
+            <table class="table is-striped is-fullwidth is-size-7">
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th>Mean AUC</th>
+                  <th>Median AUC</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ViT-B/16</td>
+                  <td>0.287</td>
+                  <td>0.249</td>
+                </tr>
+                <tr>
+                  <td>ResNet50-L4</td>
+                  <td>0.669</td>
+                  <td>0.718</td>
+                </tr>
+                <tr>
+                  <td>ViT Co-train</td>
+                  <td><b>0.697</b></td>
+                  <td><b>0.722</b></td>
+                </tr>
+                <tr>
+                  <td>BiomedCLIP FT</td>
+                  <td>0.431</td>
+                  <td>0.420</td>
+                </tr>
+                <tr>
+                  <td>LVM-Med FT</td>
+                  <td>0.408</td>
+                  <td>0.401</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-caption">
+            Structured methods improve foreground–background ranking of patch evidence.
+          </p>
         </div>
       </div>
     </div>
