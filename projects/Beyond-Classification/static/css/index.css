@@ -315,6 +315,21 @@ section.hero.is-light {
   border-radius: var(--radius);
 }
 
+/* paired figures forced to identical display height, no crop (letterbox on light bg) */
+.fig-pair .figure-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.fig-pair .figure-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  background: #fbfdff;
+  display: block;
+}
+
 .figure-caption {
   margin: 0.6rem auto 0;
   max-width: 720px;
