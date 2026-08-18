@@ -454,6 +454,47 @@
                      alt="Foreground-background AUC boxplot." loading="lazy">
                 <div class="figure-caption">Foreground–background AUC of patch evidence on pneumothorax.</div>
               </div>
+              <div class="table-wrap" style="margin-top: 1rem;">
+                <table class="table is-striped is-fullwidth is-size-7">
+                  <thead>
+                    <tr>
+                      <th>Method</th>
+                      <th>Mean AUC</th>
+                      <th>Median AUC</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>ViT-B/16</td>
+                      <td>0.287</td>
+                      <td>0.249</td>
+                    </tr>
+                    <tr>
+                      <td>ResNet50-L4</td>
+                      <td>0.669</td>
+                      <td>0.718</td>
+                    </tr>
+                    <tr>
+                      <td>ViT Co-train</td>
+                      <td><b>0.697</b></td>
+                      <td><b>0.722</b></td>
+                    </tr>
+                    <tr>
+                      <td>BiomedCLIP FT</td>
+                      <td>0.431</td>
+                      <td>0.420</td>
+                    </tr>
+                    <tr>
+                      <td>LVM-Med FT</td>
+                      <td>0.408</td>
+                      <td>0.401</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="table-caption">
+                Structured methods improve foreground–background ranking of patch evidence.
+              </p>
             </div>
           </div>
         </div>
@@ -542,49 +583,6 @@
             <p class="is-size-7" style="margin-bottom:0; color:#94a3b8;">
               Full derivations are in Appendix&nbsp;A of the paper.
             </p>
-          </div>
-
-          <div class="table-wrap" style="margin-top:1.5rem;">
-            <p class="table-caption" style="margin-bottom:0.55rem; padding-top:0.75rem;">
-              Structured methods also improve foreground–background ranking of patch evidence
-              (pneumothorax FG/BG AUC):
-            </p>
-            <table class="table is-striped is-fullwidth is-size-6">
-              <thead>
-                <tr>
-                  <th>Method</th>
-                  <th>Mean AUC</th>
-                  <th>Median AUC</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>ViT-B/16</td>
-                  <td>0.287</td>
-                  <td>0.249</td>
-                </tr>
-                <tr>
-                  <td>ResNet50-L4</td>
-                  <td>0.669</td>
-                  <td>0.718</td>
-                </tr>
-                <tr>
-                  <td>ViT Co-train</td>
-                  <td><b>0.697</b></td>
-                  <td><b>0.722</b></td>
-                </tr>
-                <tr>
-                  <td>BiomedCLIP FT</td>
-                  <td>0.431</td>
-                  <td>0.420</td>
-                </tr>
-                <tr>
-                  <td>LVM-Med FT</td>
-                  <td>0.408</td>
-                  <td>0.401</td>
-                </tr>
-              </tbody>
-            </table>
           </div>
         </div>
       </div>
